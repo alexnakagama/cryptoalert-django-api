@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ResourcesConfig(AppConfig):
-    name = 'resources'
+class CryptosConfig(AppConfig):
+    name = 'cryptos'
