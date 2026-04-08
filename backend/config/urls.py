@@ -18,7 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 
+from rest_framework.authtoken.views import obtain_auth_token
+
+from users.views import UserRegisterView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('cryptos.urls'))
+    path('api/', include('cryptos.urls')),
+    path('api/register/', UserRegisterView.as_view()),
+    path('api-token-auth/', obtain_auth_token)
 ]
